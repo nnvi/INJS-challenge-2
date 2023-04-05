@@ -32,7 +32,7 @@ async function login (req,res){
                 error :`Invalid Password !`
             })
         }else{
-            const token = generateToken({id : data[0].id,username : data[0].username})
+            const token = await generateToken({id : data[0].id,username : data[0].username})
             const result  ={
                 id : data[0].id, 
                 username : data[0].username,
